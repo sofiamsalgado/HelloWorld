@@ -16,5 +16,10 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        //println(this@MainActivity.localClassName + " onCreate")
+        // System.out   I  MainActivity onCreate
+        println(getString(R.string.activity_oncreate_msg, this@MainActivity.localClassName))
+        // A mensagem agora usa o formato Activity %1$s onCreate do strings.xml, onde %1$s foi substituído por MainActivity
+        // 4820-4820  System.out              dam_a51694.helloworld                I   Activity MainActivity onCreate
     }
 }
