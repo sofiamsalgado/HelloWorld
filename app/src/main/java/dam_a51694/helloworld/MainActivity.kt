@@ -47,11 +47,21 @@ class MainActivity : AppCompatActivity() {
             "Hello DAM!"
         )
 
-        val tvHello = findViewById<TextView>(R.id.textHello) // id do teu TextView principal
+        val tvHello = findViewById<TextView>(R.id.textHello)
         val btnChangeText = findViewById<Button>(R.id.btnChangeText)
 
         btnChangeText.setOnClickListener {
             tvHello.text = frases.random()
+        }
+
+        // counter
+        var count = 0
+        val tvCount = findViewById<TextView>(R.id.tvCount)
+        val btnCount = findViewById<Button>(R.id.btnCount)
+
+        btnCount.setOnClickListener {
+            count++
+            tvCount.text = "Clicks: $count"
         }
     }
 }
