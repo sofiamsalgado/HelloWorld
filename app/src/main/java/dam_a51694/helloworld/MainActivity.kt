@@ -2,6 +2,7 @@ package dam_a51694.helloworld
 
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
@@ -35,6 +36,22 @@ class MainActivity : AppCompatActivity() {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
                 btnDarkMode.text = "Toggle Light Mode"
             }
+        }
+
+        // botão para alterar titulo aleatoriamente
+        val frases = listOf(
+            "Hello Android World!",
+            "Kotlin!",
+            "Mobile Dev!",
+            "Keep coding!",
+            "Hello DAM!"
+        )
+
+        val tvHello = findViewById<TextView>(R.id.textHello) // id do teu TextView principal
+        val btnChangeText = findViewById<Button>(R.id.btnChangeText)
+
+        btnChangeText.setOnClickListener {
+            tvHello.text = frases.random()
         }
     }
 }
