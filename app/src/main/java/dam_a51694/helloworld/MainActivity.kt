@@ -1,5 +1,6 @@
 package dam_a51694.helloworld
 
+import android.graphics.Color
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -8,6 +9,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
+import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -63,5 +68,15 @@ class MainActivity : AppCompatActivity() {
             count++
             tvCount.text = "Clicks: $count"
         }
+
+        // alterar a cor do fundo aleatoriamente
+        val layout = findViewById<androidx.constraintlayout.widget.ConstraintLayout>(R.id.main)
+        val btnColor = findViewById<Button>(R.id.btnColor)
+
+        btnColor.setOnClickListener {
+            val cor = Color.rgb(Random.nextInt(256), Random.nextInt(256), Random.nextInt(256))
+            layout.setBackgroundColor(cor)
+        }
+
     }
 }
