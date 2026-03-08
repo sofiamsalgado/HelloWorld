@@ -5,6 +5,7 @@
 **Aluno:** Sofia — dam_a51694
 **Data:** Fevereiro/Marco 2026
 **Repositorio:** https://github.com/sofiamsalgado/HelloWorld
+
 ---
 
 ## 1. Introducao
